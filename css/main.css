@@ -1,0 +1,17 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+
+    transition: background-color 1s ease, width 2s ease, height 0.5s;
+
+    /* transition-delay: 2s; */
+}
+
+.box:hover {
+    background-color: blue;
+    width: 400px;
+    height: 50px;
+
+    /* transform: rotate(40deg); */
+}
