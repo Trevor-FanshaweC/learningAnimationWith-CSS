@@ -1,17 +1,32 @@
-.box {
-    width: 200px;
-    height: 200px;
-    background-color: red;
-
-    transition: background-color 1s ease, width 2s ease, height 0.5s;
-
-    /* transition-delay: 2s; */
+:root {
+    --main-bg-color: red;
+    --target-color: blue;
 }
 
-.box:hover {
-    background-color: blue;
-    width: 400px;
-    height: 50px;
 
-    /* transform: rotate(40deg); */
+.box {
+    width: 200px;
+    height: 50px;
+    background-color: var(--main-bg-color);
+
+    animation-name: colorswap;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    display: block;
+}
+
+.box2 { animation-duration: 1s; }
+.box3 { animation-duration: 0.5s; }
+
+@keyframes colorswap {
+    from { 
+        background-color: var(--main-bg-color);
+        width: 200px;
+    }
+    to { 
+        background-color: var(--target-color);
+        width: 400px;
+    }
 }
