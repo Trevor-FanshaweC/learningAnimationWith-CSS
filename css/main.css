@@ -3,6 +3,20 @@
     --target-color: blue;
 }
 
+.sprites {
+    width: 414px;
+    height: 238px;
+
+    border: thin dashed #333;
+
+    background-image: url('../images/bmc_logo.svg');
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    animation: logoanim 0.5s steps(7, end) infinite;
+}
+
 
 .box {
     width: 200px;
@@ -29,4 +43,9 @@
         background-color: var(--target-color);
         width: 400px;
     }
+}
+
+@keyframes logoanim {
+    from { background-position: 0 0; }
+    to { background-position: 0 -1670px; }
 }
